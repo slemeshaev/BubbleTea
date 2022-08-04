@@ -13,6 +13,7 @@
 		6676C8A5289AF64A00E27DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6676C8A3289AF64A00E27DB2 /* Main.storyboard */; };
 		6676C8A7289AF64C00E27DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6676C8A6289AF64C00E27DB2 /* Assets.xcassets */; };
 		6676C8AA289AF64C00E27DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6676C8A8289AF64C00E27DB2 /* LaunchScreen.storyboard */; };
+		66C84B2B289C4C4400EAE1B9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6676C8A6289AF64C00E27DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6676C8A9289AF64C00E27DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6676C8AB289AF64C00E27DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				6676C89D289AF64A00E27DB2 /* AppDelegate.swift */,
 				6676C89F289AF64A00E27DB2 /* SceneDelegate.swift */,
+				66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */,
 				6676C8A6289AF64C00E27DB2 /* Assets.xcassets */,
 				6676C8AB289AF64C00E27DB2 /* Info.plist */,
 			);
@@ -174,6 +177,7 @@
 				6676C8A2289AF64A00E27DB2 /* MainViewController.swift in Sources */,
 				6676C89E289AF64A00E27DB2 /* AppDelegate.swift in Sources */,
 				6676C8A0289AF64A00E27DB2 /* SceneDelegate.swift in Sources */,
+				66C84B2B289C4C4400EAE1B9 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
