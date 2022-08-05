@@ -60,6 +60,7 @@
 			children = (
 				6676C8B3289AF77A00E27DB2 /* Screens */,
 				6676C8B6289AF7AC00E27DB2 /* Utilities */,
+				66C84B2D289D99C400EAE1B9 /* Storage */,
 			);
 			path = BubbleTea;
 			sourceTree = "<group>";
@@ -95,11 +96,18 @@
 			children = (
 				6676C89D289AF64A00E27DB2 /* AppDelegate.swift */,
 				6676C89F289AF64A00E27DB2 /* SceneDelegate.swift */,
-				66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */,
 				6676C8A6289AF64C00E27DB2 /* Assets.xcassets */,
 				6676C8AB289AF64C00E27DB2 /* Info.plist */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		66C84B2D289D99C400EAE1B9 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
