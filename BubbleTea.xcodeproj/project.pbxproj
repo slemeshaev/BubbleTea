@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661675D028A03A070020E756 /* Seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 661675CF28A03A070020E756 /* Seed.json */; };
 		6676C89E289AF64A00E27DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676C89D289AF64A00E27DB2 /* AppDelegate.swift */; };
 		6676C8A0289AF64A00E27DB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676C89F289AF64A00E27DB2 /* SceneDelegate.swift */; };
 		6676C8A2289AF64A00E27DB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676C8A1289AF64A00E27DB2 /* MainViewController.swift */; };
@@ -14,10 +15,10 @@
 		6676C8A7289AF64C00E27DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6676C8A6289AF64C00E27DB2 /* Assets.xcassets */; };
 		6676C8AA289AF64C00E27DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6676C8A8289AF64C00E27DB2 /* LaunchScreen.storyboard */; };
 		66C84B2B289C4C4400EAE1B9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */; };
-		66C8B3E9289EF9ED000D8934 /* BubbleTea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66C8B3E7289EF9ED000D8934 /* BubbleTea.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		661675CF28A03A070020E756 /* Seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Seed.json; sourceTree = "<group>"; };
 		6676C89A289AF64A00E27DB2 /* BubbleTea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleTea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6676C89D289AF64A00E27DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6676C89F289AF64A00E27DB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		6676C8A9289AF64C00E27DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6676C8AB289AF64C00E27DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		66C8B3E8289EF9ED000D8934 /* BubbleTea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BubbleTea.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,7 @@
 				6676C89F289AF64A00E27DB2 /* SceneDelegate.swift */,
 				6676C8A6289AF64C00E27DB2 /* Assets.xcassets */,
 				6676C8AB289AF64C00E27DB2 /* Info.plist */,
+				661675CF28A03A070020E756 /* Seed.json */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -107,7 +108,6 @@
 		66C84B2D289D99C400EAE1B9 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				66C8B3E7289EF9ED000D8934 /* BubbleTea.xcdatamodeld */,
 				66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */,
 			);
 			path = Storage;
@@ -174,6 +174,7 @@
 			files = (
 				6676C8AA289AF64C00E27DB2 /* LaunchScreen.storyboard in Resources */,
 				6676C8A7289AF64C00E27DB2 /* Assets.xcassets in Resources */,
+				661675D028A03A070020E756 /* Seed.json in Resources */,
 				6676C8A5289AF64A00E27DB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +190,6 @@
 				6676C89E289AF64A00E27DB2 /* AppDelegate.swift in Sources */,
 				6676C8A0289AF64A00E27DB2 /* SceneDelegate.swift in Sources */,
 				66C84B2B289C4C4400EAE1B9 /* CoreDataStack.swift in Sources */,
-				66C8B3E9289EF9ED000D8934 /* BubbleTea.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -319,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -411,19 +411,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		66C8B3E7289EF9ED000D8934 /* BubbleTea.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				66C8B3E8289EF9ED000D8934 /* BubbleTea.xcdatamodel */,
-			);
-			currentVersion = 66C8B3E8289EF9ED000D8934 /* BubbleTea.xcdatamodel */;
-			path = BubbleTea.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6676C892289AF64A00E27DB2 /* Project object */;
 }
