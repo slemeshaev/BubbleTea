@@ -14,11 +14,11 @@
         <attribute name="zipcode" optional="YES" attributeType="String"/>
         <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Venue" inverseName="location" inverseEntity="Venue"/>
     </entity>
-    <entity name="PriceInfo" representedClassName="PriceInfo" syncable="YES" codeGenerationType="class">
+    <entity name="PriceInfo" representedClassName=".PriceInfo" syncable="YES">
         <attribute name="priceCategory" optional="YES" attributeType="String"/>
         <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Venue" inverseName="priceInfo" inverseEntity="Venue"/>
     </entity>
-    <entity name="Stats" representedClassName="Stats" syncable="YES" codeGenerationType="class">
+    <entity name="Stats" representedClassName=".Stats" syncable="YES">
         <attribute name="checkinsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="tipCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="usersCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
