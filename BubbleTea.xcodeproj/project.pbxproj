@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		661675D028A03A070020E756 /* Seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 661675CF28A03A070020E756 /* Seed.json */; };
 		666D89CA28A1867700F84CE2 /* BubbleTea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 666D89C828A1867700F84CE2 /* BubbleTea.xcdatamodeld */; };
+		666D89D528A18EA700F84CE2 /* Stats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89CB28A18EA700F84CE2 /* Stats+CoreDataClass.swift */; };
+		666D89D628A18EA700F84CE2 /* Stats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89CC28A18EA700F84CE2 /* Stats+CoreDataProperties.swift */; };
+		666D89D728A18EA700F84CE2 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89CD28A18EA700F84CE2 /* Location+CoreDataClass.swift */; };
+		666D89D828A18EA700F84CE2 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89CE28A18EA700F84CE2 /* Location+CoreDataProperties.swift */; };
+		666D89D928A18EA700F84CE2 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89CF28A18EA700F84CE2 /* Category+CoreDataClass.swift */; };
+		666D89DA28A18EA700F84CE2 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89D028A18EA700F84CE2 /* Category+CoreDataProperties.swift */; };
+		666D89DB28A18EA700F84CE2 /* Venue+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89D128A18EA700F84CE2 /* Venue+CoreDataClass.swift */; };
+		666D89DC28A18EA700F84CE2 /* Venue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89D228A18EA700F84CE2 /* Venue+CoreDataProperties.swift */; };
+		666D89DD28A18EA700F84CE2 /* PriceInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89D328A18EA700F84CE2 /* PriceInfo+CoreDataClass.swift */; };
+		666D89DE28A18EA700F84CE2 /* PriceInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D89D428A18EA700F84CE2 /* PriceInfo+CoreDataProperties.swift */; };
 		6676C89E289AF64A00E27DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676C89D289AF64A00E27DB2 /* AppDelegate.swift */; };
 		6676C8A0289AF64A00E27DB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676C89F289AF64A00E27DB2 /* SceneDelegate.swift */; };
 		6676C8A2289AF64A00E27DB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676C8A1289AF64A00E27DB2 /* MainViewController.swift */; };
@@ -21,6 +31,16 @@
 /* Begin PBXFileReference section */
 		661675CF28A03A070020E756 /* Seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Seed.json; sourceTree = "<group>"; };
 		666D89C928A1867700F84CE2 /* BubbleTea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BubbleTea.xcdatamodel; sourceTree = "<group>"; };
+		666D89CB28A18EA700F84CE2 /* Stats+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stats+CoreDataClass.swift"; sourceTree = "<group>"; };
+		666D89CC28A18EA700F84CE2 /* Stats+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stats+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		666D89CD28A18EA700F84CE2 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		666D89CE28A18EA700F84CE2 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		666D89CF28A18EA700F84CE2 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		666D89D028A18EA700F84CE2 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		666D89D128A18EA700F84CE2 /* Venue+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataClass.swift"; sourceTree = "<group>"; };
+		666D89D228A18EA700F84CE2 /* Venue+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		666D89D328A18EA700F84CE2 /* PriceInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PriceInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		666D89D428A18EA700F84CE2 /* PriceInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PriceInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6676C89A289AF64A00E27DB2 /* BubbleTea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleTea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6676C89D289AF64A00E27DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6676C89F289AF64A00E27DB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +63,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		666D89DF28A18EBD00F84CE2 /* NSManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				666D89CB28A18EA700F84CE2 /* Stats+CoreDataClass.swift */,
+				666D89CC28A18EA700F84CE2 /* Stats+CoreDataProperties.swift */,
+				666D89CD28A18EA700F84CE2 /* Location+CoreDataClass.swift */,
+				666D89CE28A18EA700F84CE2 /* Location+CoreDataProperties.swift */,
+				666D89CF28A18EA700F84CE2 /* Category+CoreDataClass.swift */,
+				666D89D028A18EA700F84CE2 /* Category+CoreDataProperties.swift */,
+				666D89D128A18EA700F84CE2 /* Venue+CoreDataClass.swift */,
+				666D89D228A18EA700F84CE2 /* Venue+CoreDataProperties.swift */,
+				666D89D328A18EA700F84CE2 /* PriceInfo+CoreDataClass.swift */,
+				666D89D428A18EA700F84CE2 /* PriceInfo+CoreDataProperties.swift */,
+			);
+			path = NSManagedObject;
+			sourceTree = "<group>";
+		};
 		6676C891289AF64A00E27DB2 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +147,7 @@
 		66C84B2D289D99C400EAE1B9 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				666D89DF28A18EBD00F84CE2 /* NSManagedObject */,
 				666D89C828A1867700F84CE2 /* BubbleTea.xcdatamodeld */,
 				66C84B2A289C4C4400EAE1B9 /* CoreDataStack.swift */,
 			);
@@ -190,10 +228,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				6676C8A2289AF64A00E27DB2 /* MainViewController.swift in Sources */,
+				666D89D628A18EA700F84CE2 /* Stats+CoreDataProperties.swift in Sources */,
+				666D89DE28A18EA700F84CE2 /* PriceInfo+CoreDataProperties.swift in Sources */,
 				6676C89E289AF64A00E27DB2 /* AppDelegate.swift in Sources */,
+				666D89D928A18EA700F84CE2 /* Category+CoreDataClass.swift in Sources */,
 				6676C8A0289AF64A00E27DB2 /* SceneDelegate.swift in Sources */,
+				666D89D728A18EA700F84CE2 /* Location+CoreDataClass.swift in Sources */,
+				666D89DA28A18EA700F84CE2 /* Category+CoreDataProperties.swift in Sources */,
+				666D89DB28A18EA700F84CE2 /* Venue+CoreDataClass.swift in Sources */,
+				666D89D828A18EA700F84CE2 /* Location+CoreDataProperties.swift in Sources */,
+				666D89DC28A18EA700F84CE2 /* Venue+CoreDataProperties.swift in Sources */,
 				66C84B2B289C4C4400EAE1B9 /* CoreDataStack.swift in Sources */,
+				666D89DD28A18EA700F84CE2 /* PriceInfo+CoreDataClass.swift in Sources */,
 				666D89CA28A1867700F84CE2 /* BubbleTea.xcdatamodeld in Sources */,
+				666D89D528A18EA700F84CE2 /* Stats+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
