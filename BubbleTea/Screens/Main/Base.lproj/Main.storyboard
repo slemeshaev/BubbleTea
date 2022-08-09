@@ -61,7 +61,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bubble Tea" id="LZf-fW-7s5">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="3BY-Iu-BxE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="3BY-Iu-BxE">
+                            <connections>
+                                <segue destination="OMY-84-8EG" kind="presentation" id="dmB-eZ-yS7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7wq-wD-LF3" id="pbb-fo-69O"/>
@@ -69,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.7391304347827" y="83.705357142857139"/>
+            <point key="canvasLocation" x="893" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="waG-7h-6Vd">
@@ -87,7 +91,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7d-bl-jbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="171" y="84"/>
+            <point key="canvasLocation" x="41" y="84"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="34b-1X-Gq4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Filter" id="OMY-84-8EG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaY-qJ-fZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="84"/>
         </scene>
     </scenes>
     <resources>
