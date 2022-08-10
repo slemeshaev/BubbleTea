@@ -3,30 +3,10 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filters-->
-        <scene sceneID="qyv-dH-JPX">
-            <objects>
-                <viewController id="gxm-E4-tem" customClass="FilterViewController" customModule="BubbleTea" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jei-e2-oAe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="78a-Ij-Uwk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Filters" id="RRs-Y4-P9V">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="eWC-f0-nxs"/>
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="Siz-AP-cEW"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kAv-zF-Kdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2632" y="84"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kcN-eG-mRQ">
             <objects>
@@ -38,12 +18,44 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gxm-E4-tem" kind="relationship" relationship="rootViewController" id="QeY-Ge-MaZ"/>
+                        <segue destination="LUd-Jc-svV" kind="relationship" relationship="rootViewController" id="QE8-MT-cYe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6B8-uJ-f8F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755" y="84"/>
+            <point key="canvasLocation" x="1654" y="84"/>
+        </scene>
+        <!--Filters-->
+        <scene sceneID="u2x-SY-XsH">
+            <objects>
+                <tableViewController id="LUd-Jc-svV" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bST-iT-mD7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LIL-JG-Aet">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LIL-JG-Aet" id="Ife-Xd-1aS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LUd-Jc-svV" id="bZ2-q4-n67"/>
+                            <outlet property="delegate" destination="LUd-Jc-svV" id="vnE-y9-Qng"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Filters" id="miG-Z2-Jb7">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="L8n-Ju-ucR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="uCS-1f-wvb"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8D-Fo-act" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="84"/>
         </scene>
     </scenes>
     <resources>
