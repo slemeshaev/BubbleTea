@@ -16,6 +16,9 @@ class MainViewController: UIViewController {
     
     private lazy var coreDataStack = CoreDataStack(modelName: "BubbleTea")
     
+    private var fetchRequest: NSFetchRequest<Venue>?
+    private var venues: [Venue] = []
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
@@ -23,18 +26,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         importJSONSeedDataIfNeeded()
+        prepareFetchRequest()
+        reloadVenues()
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == filterViewControllerSegueIdentifier {
-            //
         }
     }
     
     // MARK: - IBActions
     @IBAction func unwindToVenueListViewController(_ segue: UIStoryboardSegue) {
-        //
     }
     
     // MARK: - Private
@@ -55,6 +58,45 @@ class MainViewController: UIViewController {
         }
     }
     
+    private func prepareFetchRequest() {
+        guard let model = coreDataStack.managedContext.persistentStoreCoordinator?.managedObjectModel,
+              let fetchRequest = model.fetchRequestTemplate(forName: "FetchRequest") as? NSFetchRequest<Venue> else {
+            return
+        }
+        
+        self.fetchRequest = fetchRequest
+    }
+    
+    private func reloadVenues() {
+        guard let fetchRequest = fetchRequest else {
+            return
+        }
+        
+        do {
+            venues = try coreDataStack.managedContext.fetch(fetchRequest)
+            tableView.reloadData()
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: venueCellIdentifier, for: indexPath)
+        cell.textLabel?.text = "Bubble Tea Venue"
+        cell.detailTextLabel?.text = "Price Info"
+        return cell
+    }
+}
+
+// MARK: - Helper methods
+extension MainViewController {
     private func importJSONSeedData() {
         let jsonURL = Bundle.main.url(forResource: "Seed", withExtension: "json")!
         let jsonData = try! Data(contentsOf: jsonURL)
@@ -106,19 +148,5 @@ class MainViewController: UIViewController {
         }
         
         coreDataStack.saveContext()
-    }
-}
-
-// MARK: - UITableViewDataSource
-extension MainViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: venueCellIdentifier, for: indexPath)
-        cell.textLabel?.text = "Bubble Tea Venue"
-        cell.detailTextLabel?.text = "Price Info"
-        return cell
     }
 }

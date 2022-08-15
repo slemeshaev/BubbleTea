@@ -28,7 +28,7 @@ class FilterViewController: UITableViewController {
     @IBOutlet private weak var distanceSortCell: UITableViewCell!
     @IBOutlet private weak var priceSortCell: UITableViewCell!
     
-    // MARK: - Life cycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
