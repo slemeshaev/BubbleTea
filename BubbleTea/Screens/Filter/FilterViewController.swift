@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FilterViewController: UITableViewController {
     // MARK: - IBOutlets
@@ -27,6 +28,9 @@ class FilterViewController: UITableViewController {
     @IBOutlet private weak var nameZASortCell: UITableViewCell!
     @IBOutlet private weak var distanceSortCell: UITableViewCell!
     @IBOutlet private weak var priceSortCell: UITableViewCell!
+    
+    // MARK: - Properties
+    var coreDataStack: CoreDataStack!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
