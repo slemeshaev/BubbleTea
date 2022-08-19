@@ -63,7 +63,7 @@
                     <navigationItem key="navigationItem" title="Bubble Tea" id="LZf-fW-7s5">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="3BY-Iu-BxE">
                             <connections>
-                                <segue destination="OMY-84-8EG" kind="presentation" id="dmB-eZ-yS7"/>
+                                <segue destination="OMY-84-8EG" kind="presentation" identifier="toFilterViewController" id="dmB-eZ-yS7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
