@@ -112,6 +112,27 @@ extension FilterViewController {
     }
     
     func populateDealsCountLabel() {
-        //
+        let fetchRequest = NSFetchRequest<NSDictionary>(entityName: "Venue")
+        fetchRequest.resultType = .dictionaryResultType
+        
+        let sumExpressionDesc = NSExpressionDescription()
+        sumExpressionDesc.name = "sumDeals"
+        
+        let specialCountExpression = NSExpression(forKeyPath: #keyPath(Venue.specialCount))
+        sumExpressionDesc.expression = NSExpression(forFunction: "sum:",
+                                                    arguments: [specialCountExpression])
+        sumExpressionDesc.expressionResultType = .integer32AttributeType
+        
+        fetchRequest.propertiesToFetch = [sumExpressionDesc]
+        
+        do {
+            let results = try coreDataStack.managedContext.fetch(fetchRequest)
+            let resultDictionary = results.first!
+            let numberDeals = resultDictionary["sumDeals"] as! Int
+            let pluralised = numberDeals == 1 ? "deal" : "deals"
+            numDealsLabel.text = "\(numberDeals) \(pluralised)"
+        } catch let error as NSError {
+            print("Count not fetched \(error), \(error.userInfo)")
+        }
     }
 }
