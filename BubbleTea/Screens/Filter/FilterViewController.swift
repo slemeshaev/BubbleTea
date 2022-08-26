@@ -9,6 +9,12 @@
 import UIKit
 import CoreData
 
+protocol FilterViewControllerDelegate: AnyObject {
+    func filterViewController(filter: FilterViewController,
+                              didSelectPredicate predicate:NSPredicate?,
+                              sortDescriptor: NSSortDescriptor?)
+}
+
 class FilterViewController: UITableViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var firstPriceCategoryLabel: UILabel!
@@ -31,6 +37,10 @@ class FilterViewController: UITableViewController {
     
     // MARK: - Properties
     var coreDataStack: CoreDataStack!
+    
+    weak var delegate: FilterViewControllerDelegate?
+    private var selectedSortDescriptor: NSSortDescriptor?
+    private var selectedPredicate: NSPredicate?
     
     private lazy var cheapVenuePredicate: NSPredicate = {
         return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "$")
@@ -55,7 +65,10 @@ class FilterViewController: UITableViewController {
     
     // MARK: - IBActions
     @IBAction private func search(_ sender: UIBarButtonItem) {
-        print(#function)
+        delegate?.filterViewController(filter: self,
+                                       didSelectPredicate: selectedPredicate,
+                                       sortDescriptor: selectedSortDescriptor)
+        dismiss(animated: true)
     }
 }
 
