@@ -75,7 +75,22 @@ class FilterViewController: UITableViewController {
 // MARK: - UITableViewDelegate
 extension FilterViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(#function)
+        guard let cell = tableView.cellForRow(at: indexPath) else {
+            return
+        }
+        
+        switch cell {
+            case cheapVenueCell:
+                selectedPredicate = cheapVenuePredicate
+            case moderateVenueCell:
+                selectedPredicate = moderateVenuePredicate
+            case expensiveVenueCell:
+                selectedPredicate = expensiveVenuePredicate
+            default:
+                break
+        }
+        
+        cell.accessoryType = .checkmark
     }
 }
 
