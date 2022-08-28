@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         importJSONSeedDataIfNeeded()
-        prepareFetchRequest()
+        fetchRequest = Venue.fetchRequest()
         reloadVenues()
     }
     
@@ -39,10 +39,11 @@ class MainViewController: UIViewController {
         }
         
         filterViewController.coreDataStack = coreDataStack
+        filterViewController.delegate = self
     }
     
     // MARK: - IBActions
-    @IBAction func unwindToVenueListViewController(_ segue: UIStoryboardSegue) {
+    @IBAction private func unwindToVenueListViewController(_ segue: UIStoryboardSegue) {
     }
     
     // MARK: - Private
@@ -99,6 +100,28 @@ extension MainViewController: UITableViewDataSource {
         cell.textLabel?.text = venue.name
         cell.detailTextLabel?.text = venue.priceInfo?.priceCategory
         return cell
+    }
+}
+
+// MARK: - FilterViewControllerDelegate
+extension MainViewController: FilterViewControllerDelegate {
+    func filterViewController(filter: FilterViewController,
+                              didSelectPredicate predicate: NSPredicate?,
+                              sortDescriptor: NSSortDescriptor?) {
+        guard let fetchRequest = fetchRequest else {
+            return
+        }
+        
+        fetchRequest.predicate = nil
+        fetchRequest.sortDescriptors = nil
+        
+        fetchRequest.predicate = predicate
+        
+        if let sortDescriptor = sortDescriptor {
+            fetchRequest.sortDescriptors = [sortDescriptor]
+        }
+        
+        reloadVenues()
     }
 }
 
