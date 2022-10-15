@@ -54,6 +54,18 @@ class FilterViewController: UITableViewController {
         return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "$$$")
     }()
     
+    private lazy var offeringDealPredicate: NSPredicate = {
+        return NSPredicate(format: "%K > 0", #keyPath(Venue.specialCount))
+    }()
+    
+    private lazy var walkingDistancePredicate: NSPredicate = {
+        return NSPredicate(format: "%K < 500", #keyPath(Venue.location.distance))
+    }()
+    
+    private lazy var hasUserTipsPredicate: NSPredicate = {
+        return NSPredicate(format: "%K > 0", #keyPath(Venue.stats.tipCount))
+    }()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +98,12 @@ extension FilterViewController {
                 selectedPredicate = moderateVenuePredicate
             case expensiveVenueCell:
                 selectedPredicate = expensiveVenuePredicate
+            case offeringDealCell:
+                selectedPredicate = offeringDealPredicate
+            case walkingDistanceCell:
+                selectedPredicate = walkingDistancePredicate
+            case userTipsCell:
+                selectedPredicate = hasUserTipsPredicate
             default:
                 break
         }
@@ -148,7 +166,7 @@ extension FilterViewController {
         
         let specialCountExpression = NSExpression(forKeyPath: #keyPath(Venue.specialCount))
         sumExpressionDescription.expression = NSExpression(forFunction: "sum:",
-                                                    arguments: [specialCountExpression])
+                                                           arguments: [specialCountExpression])
         sumExpressionDescription.expressionResultType = .integer32AttributeType
         
         fetchRequest.propertiesToFetch = [sumExpressionDescription]
