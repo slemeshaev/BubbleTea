@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     private lazy var coreDataStack = CoreDataStack(modelName: "BubbleTea")
     
     private var fetchRequest: NSFetchRequest<Venue>?
+    private var asyncFetchRequest: NSAsynchronousFetchRequest<Venue>?
+    
     private var venues: [Venue] = []
     
     // MARK: - IBOutlets
@@ -61,6 +63,25 @@ class MainViewController: UIViewController {
             importJSONSeedData()
         } catch let error as NSError {
             print("Error fetching: \(error), \(error.userInfo)")
+        }
+    }
+    
+    private func prepareAsyncFetchRequest() {
+        let venueFetchRequest: NSFetchRequest<Venue> = Venue.fetchRequest()
+        fetchRequest = venueFetchRequest
+        
+        asyncFetchRequest = NSAsynchronousFetchRequest<Venue>(fetchRequest: venueFetchRequest) { [unowned self] (result: NSAsynchronousFetchResult) in
+            guard let venues = result.finalResult else { return }
+            
+            self.venues = venues
+            self.tableView.reloadData()
+        }
+        
+        do {
+            guard let asyncFetchRequest = asyncFetchRequest else { return }
+            try coreDataStack.managedContext.execute(asyncFetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
         }
     }
     
