@@ -66,6 +66,21 @@ class MainViewController: UIViewController {
         }
     }
     
+    private func prepareButchUpdate() {
+        let batchUpdate = NSBatchUpdateRequest(entityName: "Venue")
+        batchUpdate.propertiesToUpdate = [#keyPath(Venue.favorite): true]
+        
+        batchUpdate.affectedStores = coreDataStack.managedContext.persistentStoreCoordinator?.persistentStores
+        batchUpdate.resultType = .updatedObjectsCountResultType
+        
+        do {
+            let batchResult = try coreDataStack.managedContext.execute(batchUpdate) as! NSBatchUpdateResult
+            print("Records updated \(String(describing: batchResult.result))")
+        } catch let error as NSError {
+            print("Could not update \(error), \(error.userInfo)")
+        }
+    }
+    
     private func prepareAsyncFetchRequest() {
         let venueFetchRequest: NSFetchRequest<Venue> = Venue.fetchRequest()
         fetchRequest = venueFetchRequest
